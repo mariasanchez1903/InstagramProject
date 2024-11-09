@@ -22,8 +22,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             InstagramProjectTheme {
-               //ProfileScreen()
-                HomeScreen()
+               ProfileScreen()
+                //HomeScreen()
             }
         }
     }
