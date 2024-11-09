@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.instagramproject.home.HomeScreen
+import com.example.instagramproject.home.InstagramToolBar
 import com.example.instagramproject.profile.ProfileScreen
 import com.example.instagramproject.ui.theme.InstagramProjectTheme
 
@@ -20,7 +22,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             InstagramProjectTheme {
-               ProfileScreen()
+               //ProfileScreen()
+                HomeScreen()
             }
         }
     }
