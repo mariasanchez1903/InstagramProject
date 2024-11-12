@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.instagramproject.profile.components.ProfileAction
 import com.example.instagramproject.profile.components.ProfileDescription
 import com.example.instagramproject.profile.components.ProfileHeader
@@ -14,11 +15,11 @@ import com.example.instagramproject.profile.components.ProfilePost
 import com.example.instagramproject.profile.components.ProfileStoryHighlight
 
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(navController: NavHostController) {
     val user = UserRepository.getUser()
     Column {
         ProfileHeader(
-            backClick = {},
+            backClick = {navController.navigate("home")},
             notificationClick = {},
             optionClick = {},
             username = user.username
@@ -48,10 +49,4 @@ fun ProfileScreen() {
         )
         ProfilePost(images = user.posts, modifier = Modifier.padding(start = 16.dp, end = 16.dp))
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ProfileScreenPreview() {
-    ProfileScreen()
 }
